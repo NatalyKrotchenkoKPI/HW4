@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-07-29T14:41:50.592Z",
+    "end": "2024-07-29T14:42:04.842Z",
+    "duration": 14250,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6a47de1a-68ec-4b7f-a2d1-6fdf4749ddba",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\article.feature",
+      "file": "cypress\\e2e\\tests\\article.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9a993dec-dd95-41a0-a657-e51b39af3854",
+          "title": "Verify interaction with Article",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User likes article",
+              "fullTitle": "Verify interaction with Article User likes article",
+              "timedOut": null,
+              "duration": 6316,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "d8b5f8e7-5e85-469a-a8c4-4a80e17b89ff",
+              "parentUUID": "9a993dec-dd95-41a0-a657-e51b39af3854",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User posts comment",
+              "fullTitle": "Verify interaction with Article User posts comment",
+              "timedOut": null,
+              "duration": 3725,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "0aabc28b-fbea-4855-854e-93f3d9cfd3b3",
+              "parentUUID": "9a993dec-dd95-41a0-a657-e51b39af3854",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User likes article",
+              "fullTitle": "Verify interaction with Article User likes article",
+              "timedOut": null,
+              "duration": 3957,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "db213331-0dac-4c8f-ae48-90a5be0348e4",
+              "parentUUID": "9a993dec-dd95-41a0-a657-e51b39af3854",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d8b5f8e7-5e85-469a-a8c4-4a80e17b89ff",
+            "0aabc28b-fbea-4855-854e-93f3d9cfd3b3",
+            "db213331-0dac-4c8f-ae48-90a5be0348e4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13998,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

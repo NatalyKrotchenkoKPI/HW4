@@ -24,19 +24,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install Cypress
-        run: npx cypress install
-
-      - name: Give execute permissions to Cypress
-        run: chmod -R +x ./node_modules/.bin
-
       - name: Run Cypress tests with Mochawesome reporter
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-        run: npx cypress run --reporter mochawesome --record --key $CYPRESS_RECORD_KEY
+        run: npm run report -- --record --key $CYPRESS_RECORD_KEY
 
       - name: Upload Mochawesome Report
         uses: actions/upload-artifact@v2
         with:
           name: mochawesome-report
-          path: mochawesome-report/*.html
+          path: HW4/mochawesome-report/*.html

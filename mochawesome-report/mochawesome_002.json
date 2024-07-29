@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-07-29T14:42:29.870Z",
+    "end": "2024-07-29T14:42:32.680Z",
+    "duration": 2810,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "32cfa263-3e94-417b-b213-4caf7cbb2440",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\navigation.feature",
+      "file": "cypress\\e2e\\tests\\navigation.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "678c8207-5945-4fbe-93d5-5f69ebd038cd",
+          "title": "Verify links",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User click header logo",
+              "fullTitle": "Verify links User click header logo",
+              "timedOut": null,
+              "duration": 1032,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "ca4230c3-f8b0-4920-8c79-4339a3013f62",
+              "parentUUID": "678c8207-5945-4fbe-93d5-5f69ebd038cd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User click Home button",
+              "fullTitle": "Verify links User click Home button",
+              "timedOut": null,
+              "duration": 573,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "4ca8a656-daea-493a-9a1b-4a372badc6b2",
+              "parentUUID": "678c8207-5945-4fbe-93d5-5f69ebd038cd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User click footer logo",
+              "fullTitle": "Verify links User click footer logo",
+              "timedOut": null,
+              "duration": 405,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "287dd9df-73fa-4f86-84ea-69055417ee35",
+              "parentUUID": "678c8207-5945-4fbe-93d5-5f69ebd038cd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User click \"Thinkster\"",
+              "fullTitle": "Verify links User click \"Thinkster\"",
+              "timedOut": null,
+              "duration": 513,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "2031c0d7-0bcf-4bf6-87f7-c22fcf9b554a",
+              "parentUUID": "678c8207-5945-4fbe-93d5-5f69ebd038cd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ca4230c3-f8b0-4920-8c79-4339a3013f62",
+            "4ca8a656-daea-493a-9a1b-4a372badc6b2",
+            "287dd9df-73fa-4f86-84ea-69055417ee35",
+            "2031c0d7-0bcf-4bf6-87f7-c22fcf9b554a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2523,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
