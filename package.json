@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "report": "cypress run --reporter mochawesome"
+    "report": "cypress run --reporter mochawesome --record --key $CYPRESS_RECORD_KEY"
   },
   "keywords": [],
   "author": "",
