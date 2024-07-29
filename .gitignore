@@ -1,0 +1,11 @@
+# Node modules
+node_modules/
+
+# Cypress screenshots
+cypress/screenshots/
+
+# Cypress mochawesome report
+mochawesome-report/
+
+# npm package-lock
+package-lock.json
