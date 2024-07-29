@@ -9,15 +9,12 @@ module.exports = defineConfig({
     specPattern: "**/*.feature",
     async setupNodeEvents(on, config) {
       const options = browserify.defaultOptions;
-
-      if (cucumber && cucumber.addCucumberPreprocessorPlugin) {
+      try {
         await cucumber.addCucumberPreprocessorPlugin(on, config);
-      } else {
-        throw new Error("Cucumber preprocessor plugin is not available");
+      } catch (error) {
+        throw new Error("Cucumber preprocessor plugin is not available: " + error.message);
       }
-
       on("file:preprocessor", browserify(options));
-      
       return config;
     },
   },
