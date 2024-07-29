@@ -1,6 +1,6 @@
 const { defineConfig } = require('cypress');
 const browserify = require('@cypress/browserify-preprocessor');
-const cucumber = require('@badeball/cypress-cucumber-preprocessor');
+const cucumber = require('@badeball/cypress-cucumber-preprocessor').default;
 
 module.exports = defineConfig({
   projectId: 'c9zkvb',
