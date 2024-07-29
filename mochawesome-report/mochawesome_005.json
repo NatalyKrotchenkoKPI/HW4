@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-07-29T16:55:26.225Z",
+    "end": "2024-07-29T16:55:40.823Z",
+    "duration": 14598,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3ae269b2-b34b-4c0c-8597-6bc5bfac4d58",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\article.feature",
+      "file": "cypress\\e2e\\tests\\article.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "56b6097e-359c-4eb9-aca1-368f1ca21636",
+          "title": "Verify interaction with Article",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User likes article",
+              "fullTitle": "Verify interaction with Article User likes article",
+              "timedOut": null,
+              "duration": 4668,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "baf215cc-f99c-4676-98df-7daad45867aa",
+              "parentUUID": "56b6097e-359c-4eb9-aca1-368f1ca21636",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User posts comment",
+              "fullTitle": "Verify interaction with Article User posts comment",
+              "timedOut": null,
+              "duration": 2680,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "b30a80f9-2806-46da-84d7-f584f1da1c57",
+              "parentUUID": "56b6097e-359c-4eb9-aca1-368f1ca21636",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User likes article",
+              "fullTitle": "Verify interaction with Article User likes article",
+              "timedOut": null,
+              "duration": 7086,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Follow' within the element: <button.btn.btn-sm.btn-primary> but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Follow' within the element: <button.btn.btn-sm.btn-primary> but never did.\n    at ArticlePage.getFollowAuthor (cypress/e2e/pages/articlePage.cy.js:4:32)\n    at ArticlePage.clickFollowButton (cypress/e2e/pages/articlePage.cy.js:12:13)\n    at Context.eval (cypress/e2e/tests/steps.cy.js:84:16)\n    at Context.resolveAndRunStepDefinition (../../../../node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (../../../../node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)",
+                "diff": null
+              },
+              "uuid": "907cb5e0-df0f-4efc-aecc-bb0f8ae19fe4",
+              "parentUUID": "56b6097e-359c-4eb9-aca1-368f1ca21636",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "baf215cc-f99c-4676-98df-7daad45867aa",
+            "b30a80f9-2806-46da-84d7-f584f1da1c57"
+          ],
+          "failures": [
+            "907cb5e0-df0f-4efc-aecc-bb0f8ae19fe4"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 14434,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
