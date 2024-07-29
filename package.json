@@ -12,13 +12,13 @@
   "license": "ISC",
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^20.1.1",
-    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.2",
     "cypress": "^13.13.1",
     "mochawesome": "^6.3.1",
     "prettier": "^3.3.3"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": false,
-    "step_definitions": "cypress/e2e/tests"
+    "nonGlobalStepDefinitions": true,
+    "step_definitions": "cypress/support/step_definitions/**/*.js"
   }
 }
