@@ -1,19 +1,18 @@
 const { defineConfig } = require("cypress");
-const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esbuild").createEsbuildPlugin;
-const createBundler = require("@bahmutov/cypress-esbuild-preprocessor").createBundler;
+const browserify = require("@cypress/browserify-preprocessor");
+const cucumber = require("@badeball/cypress-cucumber-preprocessor").default;
 
 module.exports = defineConfig({
   projectId: 'c9zkvb',
   e2e: {
     baseUrl: "https://conduit.realworld.how",
     specPattern: "**/*.feature",
-    setupNodeEvents(on, config) {
-      const bundler = createBundler({
-        plugins: [createEsbuildPlugin(config)],
-      });
+    async setupNodeEvents(on, config) {
+      const options = browserify.defaultOptions;
+      await cucumber.addCucumberPreprocessorPlugin(on, config);
 
-      on("file:preprocessor", bundler);
-
+      on("file:preprocessor", browserify(options));
+      
       return config;
     },
   },
