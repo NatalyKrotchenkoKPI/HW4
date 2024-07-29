@@ -32,6 +32,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Verify installation of cypress-cucumber-preprocessor
+        run: npm ls cypress-cucumber-preprocessor
+
       - name: Grant execution rights for node modules
         run: sudo chmod -R 755 node_modules
 
