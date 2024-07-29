@@ -19,7 +19,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "18"
+          node-version: '18'
 
       - name: Cache Cypress binary
         uses: actions/cache@v2
@@ -31,9 +31,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
-      - name: Install cypress-cucumber-preprocessor
-        run: npm install @badeball/cypress-cucumber-preprocessor
 
       - name: Verify installation of cypress-cucumber-preprocessor
         run: npm ls @badeball/cypress-cucumber-preprocessor
