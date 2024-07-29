@@ -1,15 +1,25 @@
 const { defineConfig } = require("cypress");
-const cucumber = require("cypress-cucumber-preprocessor").default;
+const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
+const addCucumberPreprocessorPlugin = require("@badeball/cypress-cucumber-preprocessor").addCucumberPreprocessorPlugin;
+const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esbuild").createEsbuildPlugin;
+
 module.exports = defineConfig({
   projectId: 'c9zkvb',
- e2e: {
-  baseUrl: "https://conduit.realworld.how",
-   specPattern: "**/*.feature",
-   setupNodeEvents(on, config) {
-     on("file:preprocessor", cucumber());
-   },
- },
- reporter: 'mochawesome',
+  e2e: {
+    baseUrl: "https://conduit.realworld.how",
+    specPattern: "**/*.feature",
+    async setupNodeEvents(on, config) {
+      const bundler = createBundler({
+        plugins: [createEsbuildPlugin(config)],
+      });
+
+      on("file:preprocessor", bundler);
+      await addCucumberPreprocessorPlugin(on, config);
+
+      return config;
+    },
+  },
+  reporter: 'mochawesome',
   reporterOptions: {
     reportDir: 'mochawesome-report',
     overwrite: false,

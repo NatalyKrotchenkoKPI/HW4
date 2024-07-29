@@ -12,12 +12,10 @@
   "license": "ISC",
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^20.1.1",
-    "@cypress/browserify-preprocessor": "^3.0.2",
-    "browserify": "^17.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
     "cypress": "^13.13.1",
     "mochawesome": "^6.3.1",
-    "prettier": "^3.3.3",
-    "tsify": "^5.0.0"
+    "prettier": "^3.3.3"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,

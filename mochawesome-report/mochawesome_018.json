@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-07-29T17:07:22.066Z",
+    "end": "2024-07-29T17:07:26.267Z",
+    "duration": 4201,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "81be18be-8297-4085-9623-c1558600b097",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\signin.feature",
+      "file": "cypress\\e2e\\tests\\signin.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6ca7d6b2-8530-47d6-b3f3-e22e32ea4d3d",
+          "title": "Verify Sign in",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User signs in with valid data",
+              "fullTitle": "Verify Sign in User signs in with valid data",
+              "timedOut": null,
+              "duration": 1771,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "9ba41fdd-8fd4-43c7-82ed-fa7ab2b2cc1d",
+              "parentUUID": "6ca7d6b2-8530-47d6-b3f3-e22e32ea4d3d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User signs in with invalid Password",
+              "fullTitle": "Verify Sign in User signs in with invalid Password",
+              "timedOut": null,
+              "duration": 1342,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "0bc771e4-eee9-4373-a758-bb912f35b1ba",
+              "parentUUID": "6ca7d6b2-8530-47d6-b3f3-e22e32ea4d3d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User signs in with invalid Email",
+              "fullTitle": "Verify Sign in User signs in with invalid Email",
+              "timedOut": null,
+              "duration": 989,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "59f4d566-1888-449e-98c8-bf694e6dfd71",
+              "parentUUID": "6ca7d6b2-8530-47d6-b3f3-e22e32ea4d3d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9ba41fdd-8fd4-43c7-82ed-fa7ab2b2cc1d",
+            "0bc771e4-eee9-4373-a758-bb912f35b1ba",
+            "59f4d566-1888-449e-98c8-bf694e6dfd71"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4102,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
