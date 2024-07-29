@@ -6,10 +6,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
+
       - name: Cache Node.js modules
         uses: actions/cache@v3
         with:
@@ -20,12 +22,19 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+      
       - name: Install dependencies
         run: npm install
+      
+      - name: Check installed packages
+        run: npm list --depth=0
+      
       - name: Fix Cypress permissions
         run: chmod +x node_modules/.bin/cypress
+      
       - name: Cypress run
         uses: cypress-io/github-action@v5
+      
       - name: Upload Cypress Screenshots
         if: failure()
         uses: actions/upload-artifact@v3
