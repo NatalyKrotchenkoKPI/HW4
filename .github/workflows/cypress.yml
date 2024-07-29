@@ -30,24 +30,21 @@ jobs:
             cypress-${{ runner.os }}-
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
+
+      - name: Install Cypress
+        run: npx cypress install
 
       - name: Verify installation of cypress-cucumber-preprocessor
         run: npm ls @badeball/cypress-cucumber-preprocessor
 
-      - name: Grant execution rights for node modules
-        run: sudo chmod -R 755 node_modules
-
-      - name: Install Cypress
-        run: sudo npx cypress install
-
-      - name: Grant execution rights for Cypress
-        run: sudo chmod +x ./node_modules/.bin/cypress
+      - name: Log installed dependencies
+        run: npm ls
 
       - name: Run Cypress tests with Mochawesome reporter
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-        run: sudo npx cypress run --reporter mochawesome --reporter-options reportDir=mochawesome-report --record --key $CYPRESS_RECORD_KEY
+        run: npx cypress run --reporter mochawesome --reporter-options reportDir=mochawesome-report --record --key $CYPRESS_RECORD_KEY
 
       - name: Upload Mochawesome Report
         uses: actions/upload-artifact@v2
