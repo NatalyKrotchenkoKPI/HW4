@@ -1,5 +1,6 @@
 const { defineConfig } = require("cypress");
-const cucumber = require("@badeball/cypress-cucumber-preprocessor").default;
+const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esbuild").createEsbuildPlugin;
+const createBundler = require("@bahmutov/cypress-esbuild-preprocessor").createBundler;
 
 module.exports = defineConfig({
   projectId: 'c9zkvb',
@@ -7,7 +8,13 @@ module.exports = defineConfig({
     baseUrl: "https://conduit.realworld.how",
     specPattern: "**/*.feature",
     setupNodeEvents(on, config) {
-      on("file:preprocessor", cucumber());
+      const bundler = createBundler({
+        plugins: [createEsbuildPlugin(config)],
+      });
+
+      on("file:preprocessor", bundler);
+
+      return config;
     },
   },
   reporter: 'mochawesome',
