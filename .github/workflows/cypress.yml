@@ -32,8 +32,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install cypress-cucumber-preprocessor
+        run: npm install @badeball/cypress-cucumber-preprocessor
+
       - name: Verify installation of cypress-cucumber-preprocessor
-        run: npm ls cypress-cucumber-preprocessor
+        run: npm ls @badeball/cypress-cucumber-preprocessor
 
       - name: Grant execution rights for node modules
         run: sudo chmod -R 755 node_modules
